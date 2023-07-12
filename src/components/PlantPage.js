@@ -5,19 +5,19 @@ import Search from "./Search";
 
 function PlantPage() {
 
-  //const [plantList, setPlantList] = useState([])
+  const [plants, setPlants] = useState([])
 
-  // useEffect(() => {
-  //   fetch("http://localhost:6001/plants")
-  //     .then(res => res.json())
-  //     .then((data) => {setPlantList(data);});
-  // }, []);
+  useEffect(() => {
+    fetch("http://localhost:6001/plants")
+      .then(res => res.json())
+      .then(setPlants)
+  }, [])
 
   return (
     <main>
       <NewPlantForm />
       <Search />
-      <PlantList />
+      <PlantList plants={plants}/>
     </main>
   );
 }

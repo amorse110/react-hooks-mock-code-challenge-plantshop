@@ -1,6 +1,6 @@
 import React from "react";
 
-function PlantCard({image="https://via.placeholder.com/400", name, price}) {
+function PlantCard({id, image="https://via.placeholder.com/400", name, price}) {
   
   return (
     <li className="card">
