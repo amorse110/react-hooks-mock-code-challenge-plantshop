@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
-function PlantCard({id, image="https://via.placeholder.com/400", name, price}) {
+function PlantCard({image="https://via.placeholder.com/400", name, price}) {
   const [isInStock, setIsInStock] = useState(true)
   
   const toggleInStock= () => setIsInStock(isInStock => !isInStock)
